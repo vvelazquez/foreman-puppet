@@ -1,0 +1,12 @@
+
+{
+  "nodes": {
+    "theforeman.example.com": {
+      ":ip": "192.168.35.5",
+      "ports": [],
+      ":memory": 4096,
+      ":box": "centos/7",
+      ":bootstrap": "bootstrap-foreman.sh"
+    }
+  }
+}
