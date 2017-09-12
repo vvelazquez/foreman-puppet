@@ -13,7 +13,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   
-  config.puppet_install.puppet_version = "4.2.2"
+  #config.puppet_install.puppet_version = "4.2.2"
   nodes_config.each do |node|
     node_name   = node[0] # name of node
     node_values = node[1] # content of node
