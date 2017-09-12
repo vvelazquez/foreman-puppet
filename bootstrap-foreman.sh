@@ -53,8 +53,8 @@ else
     # First run the Puppet agent on the Foreman host which will send the first Puppet report to Foreman,
     # automatically creating the host in Foreman's database
 	
-	echo "@@bootstrap-foreman ... ... run the Puppet agent on the Foreman host"
-    /opt/puppetlabs/bin/puppet agent --test --waitforcert=60
+	#echo "@@bootstrap-foreman ... ... run the Puppet agent on the Foreman host"
+    #/opt/puppetlabs/bin/puppet agent --test --waitforcert=60
 
     # Optional, install some optional puppet modules on Foreman server to get started...
 	echo "... install some optional puppet modules"
