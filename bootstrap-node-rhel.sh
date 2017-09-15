@@ -4,6 +4,14 @@ echo "@@bootstrap-node-rhel. ... Update system first"
 # Update system first
 sudo yum update -y
 
+sudo yum -y install http://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
+sudo yum -y install puppet-agent
+sudo ln -s /opt/puppetlabs/puppet/bin/puppet /usr/bin/puppet
+ 
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
+sudo firewall-cmd --zone=public --add-port=8140/tcp --permanent
+sudo firewall-cmd --reload
 
 # Add agent section to /etc/puppetlabs/puppet/puppet.conf
 # Easier to set run interval to 120s for testing (reset to 30m for normal use)
