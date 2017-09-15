@@ -46,7 +46,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.customize ["modifyvm", :id, "--name", node_name]
       end
 
-      #config.vm.provision :shell, :path => node_values[':bootstrap']
+      config.vm.provision :shell, :path => node_values[':bootstrap']
     end
   end
 end
