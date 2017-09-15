@@ -14,11 +14,11 @@ then
 else
 echo "@@bootstrap-foreman ... Installing foreman... starting"
 
-	sudo yum -y install https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm
-	sudo yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-	sudo yum -y install https://yum.theforeman.org/releases/1.15/el7/x86_64/foreman-release.rpm
+	sudo yum -y install https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm && \
+	sudo yum -y install http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
+	sudo yum -y install https://yum.theforeman.org/releases/1.15/el7/x86_64/foreman-release.rpm && \
 	echo "@@bootstrap-foreman ... Installing foreman... sudo yum -y install foreman-installer
-	sudo yum -y install foreman-installer
+	sudo yum -y install foreman-installer && \
 	echo "@@bootstrap-foreman ... Before foreman-installer..."
 	sudo foreman-installer
 echo "@@bootstrap-foreman ... After foreman-installer..."
